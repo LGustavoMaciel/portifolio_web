@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
     return AppBar(
       titleSpacing: 0.0,
       title: _buildTitle(),
-      backgroundColor: Colors.transparent,
+      backgroundColor: Color.fromARGB(0, 29, 75, 117),
       elevation: 0.0,
       actions: !ResponsiveWidget.isSmallScreen(context) ? _buildActions() : null,
     );
@@ -45,8 +45,6 @@ class HomePage extends StatelessWidget {
   Widget _buildTitle() {
     return RichText(
       text: TextSpan(
-        // Note: Styles for TextSpans must be explicitly defined.
-        // Child text spans will inherit styles from parent
         style: TextStyle(
           fontSize: 14.0,
           color: Colors.black,
@@ -183,7 +181,7 @@ class HomePage extends StatelessWidget {
       borderRadius: BorderRadius.circular(50),
       child: Image.network(
         Assets.programmer3,
-        height: ScreenUtil.getInstance().setWidth(345), //480.0
+        height: ScreenUtil.getInstance().setWidth(245), //480.0
       ),
     );
   }
